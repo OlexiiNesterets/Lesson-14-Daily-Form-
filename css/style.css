@@ -41,7 +41,7 @@
     font-size: 12px;
 }
 
-.heading-wrap {
+.heading {
     display: flex;
     width: 315px;
     align-items: center;
@@ -66,18 +66,26 @@
     flex-wrap: wrap;
 }
 
+.fieldset-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .fieldset__item {
     background: #f0f0f0;
     color: #7a7b7f;
     font-size: 14px;
     height: 40px;
-    width: 40px;
     padding: 0 15px;
+    flex: 1 1 100%;
 }
 
-.fieldset__item:first-child {
-    margin-right: 15px;
+.fieldset__item--small {
+    width: calc( (100% - 75px) / 2);
+    flex: 0 1 auto;
 }
+
 
 .fieldset__item:last-child {
     margin-bottom: 0;
@@ -85,14 +93,6 @@
 
 .fieldset__item::placeholder {
     color: #7a7b7f;
-}
-
-.fieldset__item--flex-basis-40 {
-    flex: 1 1 40%;
-}
-
-.fieldset__item--flex-basis-60 {
-    flex: 1 1 60%;
 }
 
 .button {
